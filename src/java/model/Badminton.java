@@ -28,15 +28,15 @@ public class Badminton {
     public int getMember_ID() {
         return Member_ID;
     }
-    
+
     public void setMember_ID(int Member_ID) {
         this.Member_ID = Member_ID;
     }
-    
+
     public String getOfficial_Name() {
         return Official_Name;
     }
-    
+
     public void setOfficial_Name(String Official_Name) {
         this.Official_Name = Official_Name;
     }
@@ -44,7 +44,7 @@ public class Badminton {
     public String getPrefer_Name() {
         return Prefer_Name;
     }
-    
+
     public void setPrefer_Name(String Prefer_Name) {
         this.Prefer_Name = Prefer_Name;
     }
@@ -52,7 +52,7 @@ public class Badminton {
     public String getEmail() {
         return Email;
     }
-    
+
     public void setEmail(String Email) {
         this.Email = Email;
     }
@@ -69,7 +69,6 @@ public class Badminton {
     public String toString() {
         return "Badminton{" + "Member_ID=" + Member_ID + ", Official_Name=" + Official_Name + ", Prefer_Name=" + Prefer_Name + ", Email=" + Email + ", Phone_Number=" + Phone_Number + '}';
     }
-    
     
     
 }
