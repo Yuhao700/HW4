@@ -56,7 +56,7 @@ public class ReadQuery {
     public void doRead(){
         
         try {
-            String query = "Select * from Badminton_Club";
+            String query = "Select * from badminton";
             
             PreparedStatement ps = conn.prepareStatement(query);
             this.results = ps.executeQuery();
@@ -76,11 +76,11 @@ public class ReadQuery {
             while(this.results.next()){
                 
                 Members member = new Members();
-                member.setMemberID(this.results.getInt("member_ID"));
-                member.setOfficialName(this.results.getString("official_name"));
-                member.setPreferName(this.results.getString("prefer_name"));
-                member.setEmail(this.results.getString("email"));
-                member.setPhoneNumber(this.results.getInt("phone_number"));
+                member.setMemberID(this.results.getInt("MemberID"));
+                member.setOfficialName(this.results.getString("OfficialName"));
+                member.setPreferName(this.results.getString("PreferName"));
+                member.setEmail(this.results.getString("Email"));
+                member.setPhoneNumber(this.results.getInt("PhoneNumber"));
                 
                 table += "<tr>";
                 table += "<td>";
