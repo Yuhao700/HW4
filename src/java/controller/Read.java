@@ -61,7 +61,8 @@ public class Read extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        doPost(request, response);
+        
+                doPost(request, response);
     }
 
     /**
@@ -75,17 +76,19 @@ public class Read extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            ReadQuery rq = new ReadQuery();
             
-           rq.doRead();
-           String table = rq.getHTMLtable();
-           
-           request.setAttribute("table", table);
-           String url = "/read.jsp";
-           
-           RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-           dispatcher.forward(request, response);
-           
+                ReadQuery rq = new ReadQuery();
+                
+                rq.doRead();
+                String table =rq.getHTMLtable();
+                
+                request.setAttribute("table", table);
+                String url = "/read.jsp";
+                
+                RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+                dispatcher.forward(request, response);
+        
+        
     }
 
     /**
